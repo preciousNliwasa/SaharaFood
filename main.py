@@ -80,7 +80,7 @@ async def Vision_and_Mission():
 
 # Inserting customer details in the customer Table
 @app.post('/customer',tags = ['customer'])
-async def Create_Customer(response:Response,Admin:str,Sahara_Key:str,Customer_Name:str = Form(...),Sex:str = Form(...),Phone_Number:str = Form(...),PrePaid:bool = Form(...),Amount:int = Form(...),db : Session = Depends(get_db)):
+async def Create_Customer(response:Response,Admin:str,Sahara_Key:str,Customer_Name:str,Sex:str,Phone_Number:str,PrePaid:bool,Amount:int,db : Session = Depends(get_db)):
     
     admin = db.query(Sahara).filter(Sahara.Admin == Admin).first()
     
@@ -147,7 +147,7 @@ async def Get_Customer_Details(response:Response,Admin:str,Sahara_Key:str,Custom
 
 # Updating a specific customer details in the customer table
 @app.put('/customer',tags = ['customer'])
-async def Update_Customers_details(response:Response,Admin:str,Sahara_Key:str,CustomerName:str,Customer_Name:str = Form(...),Sex:str = Form(...),Phone_Number:str = Form(...),PrePaid:bool = Form(...),Amount:int = Form(...),db : Session = Depends(get_db)):
+async def Update_Customers_details(response:Response,Admin:str,Sahara_Key:str,CustomerName:str,Customer_Name:str,Sex:str,Phone_Number:str,PrePaid:bool,Amount:int,db : Session = Depends(get_db)):
     
     admin = db.query(Sahara).filter(Sahara.Admin == Admin).first()
     
@@ -190,7 +190,7 @@ async def Delete_Customer_Details(response:Response,Admin:str,Sahara_Key:str,Cus
         
 # Inserting an operator in the operator table
 @app.post('/operator',tags = ['operator'])
-async def Create_Operator(Admin:str,Sahara_Key:str,Operator_Name:str = Form(...),Sex:str = Form(...),Place_Of_Stay:str = Form(...),Phone_Number:str = Form(...),Places_Of_Operation:str = Form(...),db : Session = Depends(get_db)):
+async def Create_Operator(Admin:str,Sahara_Key:str,Operator_Name:str,Sex:str,Place_Of_Stay:str,Phone_Number:str,Places_Of_Operation:str,db : Session = Depends(get_db)):
     
     admin = db.query(Sahara).filter(Sahara.Admin == Admin).first()
     
@@ -253,7 +253,7 @@ async def Get_Specific_Operator_Details(response:Response,Admin:str,Sahara_Key:s
     
 # Updating an operator details in the Operator Table
 @app.put('/operator',tags = ['operator'])
-async def Update_Operator_Details(response:Response,Admin:str,Sahara_Key:str,OperatorName:str,Operator_Name:str = Form(...),Sex:str = Form(...),Place_Of_Stay:str = Form(...),Phone_Number:str = Form(...),Places_Of_Operation:str = Form(...),db : Session = Depends(get_db)):
+async def Update_Operator_Details(response:Response,Admin:str,Sahara_Key:str,OperatorName:str,Operator_Name:str,Sex:str,Place_Of_Stay:str,Phone_Number:str,Places_Of_Operation:str,db : Session = Depends(get_db)):
     
     admin = db.query(Sahara).filter(Sahara.Admin == Admin).first()
     
