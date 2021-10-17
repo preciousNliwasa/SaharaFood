@@ -24,7 +24,7 @@ nltk >= 3.4.5
 websockets ==8.1
 Click==7.0
 h11==0.9.0
-six=1.14.0
+six==1.14.0
 pylint==2.4.4
 astroid==2.3.3
 lazy-object-proxy ==1.4.3
