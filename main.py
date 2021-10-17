@@ -7,7 +7,7 @@ import uvicorn
 
 from passlib.context import CryptContext
 
-pwd_co = CryptContext(schemes = ['bcrypt'],deprecated = 'auto')
+'''pwd_co = CryptContext(schemes = ['bcrypt'],deprecated = 'auto')
 
 class Hashed():
     
@@ -70,14 +70,14 @@ class Sahara(Base):
 
 Base.metadata.create_all(bind = engine)
 
-app = FastAPI(title = 'SAHARA FOOD DELIVERY API')
+app = FastAPI(title = 'SAHARA FOOD DELIVERY API')'''
 
 # Home
 @app.get('/',tags = ['HOME'])
 async def Vision_and_Mission():
     return {'Bringing You Standard and Quality Products'}
 
-
+'''
 # Inserting customer details in the customer Table
 @app.post('/customer',tags = ['customer'])
 async def Create_Customer(response:Response,Admin:str,Sahara_Key:str,Customer_Name:str,Sex:str,Phone_Number:str,PrePaid:bool,Amount:int,db : Session = Depends(get_db)):
@@ -295,7 +295,7 @@ async def Delete_Operator_Details(Admin:str,Sahara_Key:str,Operator_Name:str,db 
             return {'wrong sahara key'}
 
 
-'''# Sahara Key
+# Sahara Key
 @app.post('/sahara',status_code = 201,tags = ['sahara key'])
 async def Sahara_Key(Admin:str = Form(...),Sahara_Key:str = Form(...),db : Session = Depends(get_db)):
     key = Hashed.cryp(Sahara_Key)
@@ -303,5 +303,5 @@ async def Sahara_Key(Admin:str = Form(...),Sahara_Key:str = Form(...),db : Sessi
     db.add(sahara_key)
     db.commit()
     db.refresh(sahara_key)
-    return sahara_key'''
+    return sahara_key '''
     
