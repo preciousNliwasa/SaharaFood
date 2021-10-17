@@ -305,5 +305,3 @@ async def Sahara_Key(Admin:str = Form(...),Sahara_Key:str = Form(...),db : Sessi
     db.refresh(sahara_key)
     return sahara_key'''
     
-if __name__ == '__main__':
-    uvicorn.run(app,host = '127.0.0.1',port = 8000)
