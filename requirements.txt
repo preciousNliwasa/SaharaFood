@@ -9,7 +9,6 @@ bcrypt==3.1.7
 httptools
 Flask == 1.1.1
 itsdangerous == 1.1.0
-jinja2 == 2.10.1
 MarkupSafe == 1.1.1
 Werkzeug == 0.15.5
 numpy >= 1.9.2
@@ -17,7 +16,6 @@ scipy >= 0.15.1
 scikit-learn >= 0.18
 matplotlib >= 1.4.3
 pandas >= 0.19
-nltk >= 3.4.5
 websockets ==8.1
 Click==7.0
 h11==0.9.0
