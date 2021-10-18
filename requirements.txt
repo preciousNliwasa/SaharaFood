@@ -53,3 +53,5 @@ wcwidth==0.1.7
 webencodings==0.5.1
 webruntime==0.5.6
 Werkzeug==0.15.4
+uvloop
+httptools
