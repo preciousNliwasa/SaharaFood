@@ -177,7 +177,6 @@ pyodbc==4.0.26
 pyOpenSSL==19.0.0
 pyparsing==2.4.0
 pyperclip==1.7.0
-pypiwin32==223
 pyquery==1.4.3
 pyreadline==2.1
 pyrsistent==0.14.11
@@ -193,9 +192,6 @@ python-jose==3.3.0
 python-multipart==0.0.5
 python-slugify==4.0.0
 pyttsx3==2.90
-pytz==2019.1
-pywin32==223
-pywinpty==0.5.5
 PyYAML==5.1.1
 pyzmq==18.0.0
 requests==2.22.0
